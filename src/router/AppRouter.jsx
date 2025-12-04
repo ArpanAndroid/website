@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { routes } from './routes';
+import Home from '../pages/Home';
 
 /**
  * AppRouter Component
@@ -10,13 +11,7 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {routes.map((route, index) => (
-                    <Route
-                        key={index}
-                        path={route.path}
-                        element={route.element}
-                    />
-                ))}
+                <Route path="/" element={<Home />} />
             </Routes>
         </BrowserRouter>
     );

@@ -13,8 +13,9 @@ export const useHome = () => {
     useEffect(() => {
         const loadContent = async () => {
             try {
-                const data = await fetchContent();
-                setContent(data);
+                const encryptedData = await fetchContent();
+                const decryptedData = JSON.parse(atob(encryptedData));
+                setContent(decryptedData);
             } catch (err) {
                 setError(err);
             } finally {

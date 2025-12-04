@@ -1,55 +1,9 @@
 export const fetchContent = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({
-                header: {
-                    logo: "FionaGreens",
-                    links: [
-                        { label: "Home", href: "#home" },
-                        { label: "Features", href: "#features" },
-                        { label: "About", href: "#about" },
-                        { label: "Contact", href: "#contact" }
-                    ],
-                    cta: "Get Started"
-                },
-                hero: {
-                    headline: "Fresh, Organic, & Pure from FionaGreens",
-                    subheadline: "Discover the finest selection of 100% organic products. Grown with care, harvested for your health, and delivered fresh to your door.",
-                    primaryCta: "Shop Now",
-                    secondaryCta: "Our Story"
-                },
-                features: {
-                    title: "Why Choose FionaGreens?",
-                    subtitle: "Experience the difference of true quality.",
-                    items: [
-                        {
-                            title: "100% Organic",
-                            description: "Certified organic produce free from harmful pesticides and synthetic fertilizers. Pure nature in every bite.",
-                            icon: "🌿"
-                        },
-                        {
-                            title: "Health Benefits",
-                            description: "Rich in essential nutrients and antioxidants. Boost your immunity and overall well-being with fresh greens.",
-                            icon: "❤️"
-                        },
-                        {
-                            title: "Farm to Table",
-                            description: "Sourced directly from local sustainable farms to ensure maximum freshness and support for local communities.",
-                            icon: "🚜"
-                        }
-                    ]
-                },
-                footer: {
-                    logo: "FionaGreens",
-                    tagline: "Building a better web for a better world.",
-                    copyright: `© ${new Date().getFullYear()} FionaGreens Inc. All rights reserved.`,
-                    links: {
-                        product: ["Features", "Pricing", "Showcase"],
-                        company: ["About", "Careers", "Contact"],
-                        connect: ["Twitter", "LinkedIn", "GitHub"]
-                    }
-                }
-            });
+            // Simulated encrypted data (Base64 encoded)
+            const encryptedData = "eyJoZWFkZXIiOiB7ImxvZ28iOiAiRmlvbmFHcmVlbnMiLCAibGlua3MiOiBbeyJsYWJlbCI6ICJIb21lIiwgImhyZWYiOiAiI2hvbWUifSwgeyJsYWJlbCI6ICJGZWF0dXJlcyIsICJocmVmIjogIiNmZWF0dXJlcyJ9LCB7ImxhYmVsIjogIkFib3V0IiwgImhyZWYiOiAiI2Fib3V0In0sIHsibGFiZWwiOiAiQ29udGFjdCIsICJocmVmIjogIiNjb250YWN0In1dLCAiY3RhIjogIkdldCBTdGFydGVkIn0sICJoZXJvIjogeyJoZWFkbGluZSI6ICJGcmVzaCwgT3JnYW5pYywgJiBQdXJlIGZyb20gRmlvbmFHcmVlbnMiLCAic3ViaGVhZGxpbmUiOiAiRGlzY292ZXIgdGhlIGZpbmVzdCBzZWxlY3Rpb24gb2YgMTAwJSBvcmdhbmljIHByb2R1Y3RzLiBHcm93biB3aXRoIGNhcmUsIGhhcnZlc3RlZCBmb3IgeW91ciBoZWFsdGgsIGFuZCBkZWxpdmVyZWQgZnJlc2ggdG8geW91ciBkb29yLiIsICJwcmltYXJ5Q3RhIjogIlNob3AgTm93IiwgInNlY29uZGFyeUN0YSI6ICJPdXIgU3RvcnkifSwgImZlYXR1cmVzIjogeyJ0aXRsZSI6ICJXaHkgQ2hvb3NlIEZpb25hR3JlZW5zPyIsICJzdWJ0aXRsZSI6ICJFeHBlcmllbmNlIHRoZSBkaWZmZXJlbmNlIG9mIHRydWUgcXVhbGl0eS4iLCAiaXRlbXMiOiBbeyJ0aXRsZSI6ICIxMDAlIE9yZ2FuaWMiLCAiZGVzY3JpcHRpb24iOiAiQ2VydGlmaWVkIG9yZ2FuaWMgcHJvZHVjZSBmcmVlIGZyb20gaGFybWZ1bCBwZXN0aWNpZGVzIGFuZCBzeW50aGV0aWMgZmVydGlsaXplcnMuIFB1cmUgbmF0dXJlIGluIGV2ZXJ5IGJpdGUuIiwgImljb24iOiAiXHVkODNjXHVkZjNmIn0sIHsidGl0bGUiOiAiSGVhbHRoIEJlbmVmaXRzIiwgImRlc2NyaXB0aW9uIjogIlJpY2ggaW4gZXNzZW50aWFsIG51dHJpZW50cyBhbmQgYW50aW94aWRhbnRzLiBCb29zdCB5b3VyIGltbXVuaXR5IGFuZCBvdmVyYWxsIHdlbGwtYmVpbmcgd2l0aCBmcmVzaCBncmVlbnMuIiwgImljb24iOiAiXHUyNzY0XHVmZTBmIn0sIHsidGl0bGUiOiAiRmFybSB0byBUYWJsZSIsICJkZXNjcmlwdGlvbiI6ICJTb3VyY2VkIGRpcmVjdGx5IGZyb20gbG9jYWwgc3VzdGFpbmFibGUgZmFybXMgdG8gZW5zdXJlIG1heGltdW0gZnJlc2huZXNzIGFuZCBzdXBwb3J0IGZvciBsb2NhbCBjb21tdW5pdGllcy4iLCAiaWNvbiI6ICJcdWQ4M2RcdWRlOWMifV19LCAiZm9vdGVyIjogeyJsb2dvIjogIkZpb25hR3JlZW5zIiwgInRhZ2xpbmUiOiAiQnVpbGRpbmcgYSBiZXR0ZXIgd2ViIGZvciBhIGJldHRlciB3b3JsZC4iLCAiY29weXJpZ2h0IjogIlx1MDBhOSAyMDI1IEZpb25hR3JlZW5zIEluYy4gQWxsIHJpZ2h0cyByZXNlcnZlZC4iLCAibGlua3MiOiB7InByb2R1Y3QiOiBbIkZlYXR1cmVzIiwgIlByaWNpbmciLCAiU2hvd2Nhc2UiXSwgImNvbXBhbnkiOiBbIkFib3V0IiwgIkNhcmVlcnMiLCAiQ29udGFjdCJdLCAiY29ubmVjdCI6IFsiVHdpdHRlciIsICJMaW5rZWRJbiIsICJHaXRIdWIiXX19fQ==";
+            resolve(encryptedData);
         }, 500); // Simulate network delay
     });
 };
