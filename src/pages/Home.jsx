@@ -3,6 +3,7 @@ import { useHome } from '../hooks/useHome';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
+import Products from '../components/Products';
 import Footer from '../components/Footer';
 
 /**
@@ -37,6 +38,7 @@ const Home = () => {
             <main>
                 <Hero data={content.hero} />
                 <Features data={content.features} />
+                <Products data={content.products} />
             </main>
             <Footer data={content.footer} />
         </>
