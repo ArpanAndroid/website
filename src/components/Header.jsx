@@ -70,12 +70,12 @@ const Header = ({ data }) => {
         {data?.links?.map((link, index) => (
           <a key={index} href={link.href} style={styles.link}>{link.label}</a>
         ))}
-        <button style={styles.cartButton} onClick={() => navigate('/cart')}>
-          🛒 Cart
-          {getCartCount() > 0 && (
+        {getCartCount() > 0 && (
+          <button style={styles.cartButton} onClick={() => navigate('/cart')}>
+            🛒 Cart
             <span style={styles.cartBadge}>{getCartCount()}</span>
-          )}
-        </button>
+          </button>
+        )}
       </nav>
     </header>
   );
